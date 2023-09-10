@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+}
+
+:root{
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --moderate-blue: hsl(238, 40%, 52%);
+    --dark-blue: hsl(212, 24%, 26%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (min-width: 1400px){
+    .container-lg{
+        max-width: 1140px !important;
+    }
+}
+
+/** NAVBAR **/
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+#topnav .nav-link{
+    font-weight: 700;
+    color: #000000;
+}
+
+#btn-cart .badge{
+    background-color: var(--orange);
+    font-size: .6rem;
+    right: 3px;
+    top: 2px;
+}
+
+#cart-dropdown{
+    min-width: 95vw;
+    left: unset;
+    right: -72px !important;
+    transform: translate(0%, 20px);
+    border: none !important;
+}
+
+#cart-dropdown h6{
+    color: black;
+    font-weight: 700;
+}
+
+#cart-dropdown .dropdown-item.empty{
+    color: var(--dark-grayish-blue);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.cart-item p,
+.cart-item p span{
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+} 
+
+.cart-price{
+    color: var(--black) !important;
+}
+
+.btn-checkout{
+    background-color: var(--orange) !important;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+#btn-profile{
+    width: 70px;
+}
+
+#btn-profile img{
+    border: 2px solid white;
+    transition: .3s ease;
+}
+
+#btn-profile img:hover{
+    border: 2px solid var(--orange);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--white) !important;
+}
+
+@media screen and (min-width: 768px) {
+    #topnav .nav-link{
+        font-size: .95rem;
+        font-weight: 500;
+        color: var(--dark-grayish-blue);
+        transition: .3s ease;
+        position: relative;
+    }
+
+    #topnav .nav-link:hover{
+        color: var(--very-dark-blue)
+    }
+
+    #topnav .nav-link::after{
+        content: " ";
+        display: block;
+        width: 115%;
+        height: 3px;
+        position: absolute;
+        bottom: -42px;
+        left: -5px;
+        background-color: var(--orange);
+        transform: scale(0,1);
+        transform-origin: center;
+        transition: transform ease-in-out 250ms;
+    }
+
+    #topnav .nav-link:hover::after{
+        transform: scale(1,1);
+    }
+
+    #cart-dropdown{
+        min-width: 300px;
+    }
+}
+
+/** END OF NAVBAR **/
+
+/** PRODUCT SECTION **/
+
+.carousel-control-next, .carousel-control-prev{
+    opacity: 1 !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: unset !important;
+    height: unset !important;
+    background-image: none !important;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.carousel-control-next-icon{
+    padding: 10px 15px 12px 18px;;
+}
+
+.carousel-control-prev-icon{
+    padding: 10px 18px 12px 15px;;
+}
+
+.product-img-lg{
+    max-height: 450px !important;
+}
+
+.btn-thumbnail{
+    border: none !important;
+}
+
+.btn-thumbnail img{
+    transition: .3s ease-in-out;
+}
+
+.btn-thumbnail img:hover{
+    opacity: .6;
+}
+
+.btn-thumbnail.selected img{
+    opacity: .6;
+    border: 2px solid var(--orange);
+}
+
+h3{
+    color: var(--orange);
+    font-size: .85rem;
+    letter-spacing: .1rem;
+}
+
+.product-desc p{
+    font-size: .9rem;
+    color: var(--dark-grayish-blue);
+    line-height: 1.6rem;
+}
+
+.product-price{
+    letter-spacing: 1px;
+}
+
+.product-disc{
+    color: var(--orange) !important;
+    background-color: var(--pale-orange) !important;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.product-total{
+    text-decoration: line-through;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--grayish-blue);
+}
+
+.product-quantity{
+    background-color: var(--light-grayish-blue);
+}
+
+#btn-minus-quantity img{
+    transform: translateY(-1px);
+}
+
+#txt-quantity{
+    width: 30px;
+    color: black;
+}
+
+#btn-add-quantity img{
+    transform: translateY(-2px);
+}
+
+.btn-addtocart{
+    background-color: var(--orange);
+    font-size: .85rem;
+    font-weight: 600;
+    box-shadow: 0px 10px 25px -10px #ff7d1a99, 0px 5px 15px -8px #ff7d1a;
+}
+
+.btn-transition{
+    transition: .3s ease-in-out;
+}
+
+.btn-transition:hover, .btn-transition:active{
+    scale: 1.02;
+    opacity: .8;
+}
+
+.btn-transition:active{
+    opacity: .6;
+}
+
+/** END OF PRODUCT SECTION **/
+
+/** LIGHTBOX SECTION **/
+
+.icon-close-white{
+    width: 18px;
+}
+
+#carouselLightbox .carousel-control-prev{
+    left: -8% !important;
+}
+
+#carouselLightbox .carousel-control-next{
+    right: -8% !important;
+}
+
+.carousel-indicators {
+    bottom: -25% !important;
+    margin: 0 5% !important;
+    gap: 5%;
+    justify-content: space-between !important;
+}
+
+.carousel-indicators [data-bs-target]{
+    opacity: 1 !important;
+    background: none !important;
+    height: unset !important;
+    width: 100% !important;
+    text-indent: 0 !important;
+    border: none !important;
+}
+
+.carousel-indicators .active {
+    background-color: white !important;
+}
+
+.carousel-indicators .active img{
+    opacity: .6;
+    border: 2px solid var(--orange);
+}
+
+/** END OF LIGHTBOX SECTION **/
+
+
+/* .attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+} */
+
+.attribution{
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+
+.attribution a{
+    text-decoration: none;
+    color: var(--moderate-blue);
+    cursor: pointer;
+    font-size: .9rem;
+}
+
